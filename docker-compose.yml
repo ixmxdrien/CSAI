@@ -1,0 +1,24 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backendcsai
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - OPENROUTER_API_KEY=OPENROUTER_API_KEY
+    
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontendcsai
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
