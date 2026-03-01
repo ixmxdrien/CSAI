@@ -9,6 +9,9 @@ install-backend:
 
 backend-format:
 	cd $(BACKEND_DIR) && uv format
+
+be-launch :
+	cd $(BACKEND_DIR) && uvicorn app.main:app --reload
 	
 
 # Frontend
