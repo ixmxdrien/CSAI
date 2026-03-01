@@ -18,3 +18,12 @@ be-launch :
 install-frontend:
 	cd $(FRONTEND_DIR) && npm install
 
+fe-launch:
+	cd $(FRONTEND_DIR) && npm run dev
+
+
+
+# Launch Backend and Frontend
+launch:
+	cd $(BACKEND_DIR) && uvicorn main:app --reload &
+	cd $(FRONTEND_DIR) && npm run dev
