@@ -31,7 +31,6 @@ jobs:
       - name: lint (ruff)
         working-directory: backend
         run: |
-          uv add ruff
           ruff check .
         
       - name: Tests (pytest)
