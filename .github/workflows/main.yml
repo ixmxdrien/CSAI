@@ -62,6 +62,7 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.OPENAI_API_KEY }}
         run: |
+          cd backend/tests
           pytest -v -m integration
   
   
