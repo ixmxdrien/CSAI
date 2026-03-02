@@ -1,4 +1,3 @@
-import pytest
 from app.chat.service import handle_chat
 
 
