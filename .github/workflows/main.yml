@@ -54,7 +54,7 @@ jobs:
       - name: Run integration tests (requires OPENROUTER_API_KEY)
         working-directory: backend
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           cd tests
           pytest -v -m integration
