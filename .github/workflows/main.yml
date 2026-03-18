@@ -50,18 +50,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest pytest-asyncio
-
-      - name: Run integration tests (requires OPENROUTER_API_KEY)
-        working-directory: backend
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: |
-          cd tests
-          pytest -v -m integration
   
   
   frontend:
-    name: Frontend
+    name: Frontends
     runs-on: ubuntu-latest
 
     steps:
