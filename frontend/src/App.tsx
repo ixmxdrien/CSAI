@@ -81,7 +81,7 @@ export default function App() {
               color: "#111827",
             }}
           >
-            CSAI – Assistant
+            HomeAI – Assistant
           </h1>
           <p
             style={{
